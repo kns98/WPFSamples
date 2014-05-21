@@ -1,0 +1,4 @@
+*.baml
+MultiGaugeSample/obj/
+MultiGaugeSample/bin/Debug/MultiGaugeSample.exe.config
+MultiGaugeSample/bin/Debug/MultiGaugeSample.vshost.exe.config
