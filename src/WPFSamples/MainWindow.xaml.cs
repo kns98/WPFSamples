@@ -30,6 +30,7 @@ namespace WPFSamples
             this.ListBox.SelectionChanged += (sender, args) =>
             {
                 this.Flyout.IsOpen = this.ListBox.SelectedItem != null;
+                this.TopFlyout.IsOpen = false;
             };
 
             this.LoadSamples();
@@ -42,6 +43,8 @@ namespace WPFSamples
             await Task.Delay(50);
 
             this.ListBox.SelectedItem = null;
+
+            this.TopFlyout.IsOpen = true;
         }
 
         private void Hyperlink_OnRequestNavigate(object sender, RequestNavigateEventArgs e)
