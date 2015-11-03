@@ -1,7 +1,6 @@
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Collections.Generic;
 
 namespace WPFSamples.Samples.HousePlan
 {

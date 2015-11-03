@@ -1,6 +1,3 @@
-using System.ComponentModel;
-using System.Linq;
-using System.Windows;
 using System.Windows.Media;
 
 namespace WPFSamples.Samples.HousePlan

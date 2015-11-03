@@ -1,6 +1,3 @@
-using System;
-using System.Windows.Media;
-using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Windows;
 namespace WPFSamples.Samples.HousePlan
