@@ -1,0 +1,19 @@
+<local:SampleWindow x:Class="WPFSamples.Samples.ListBoxAndUserControls.ListBoxAndUserControls"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPFSamples"
+                    xmlns:local2="clr-namespace:WPFSamples.Samples.ListBoxAndUserControls"
+                    Title="ListBoxAndUserControls" Width="500" Height="300">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local2:Item1}">
+            <local2:UserControl1/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local2:Item2}">
+            <local2:UserControl2/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local2:Item3}">
+            <local2:UserControl3/>
+        </DataTemplate>
+    </Window.Resources>
+    <ListBox ItemsSource="{Binding}"/>
+</local:SampleWindow>

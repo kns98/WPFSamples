@@ -1,0 +1,47 @@
+<local:SampleWindow x:Class="WPFSamples.Samples.SamsGameSample.SamsGameSample"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPFSamples"
+                    xmlns:local2="clr-namespace:WPFSamples.Samples.SamsGameSample"
+                    Title="SamsGameSample"
+                    PreviewKeyDown="Window_PreviewKeyDown"
+                    PreviewKeyUp="Window_PreviewKeyUp"
+                    SizeChanged="Window_SizeChanged"
+                    WindowState="Maximized">
+    <local:SampleWindow.Resources>
+        <DataTemplate DataType="{x:Type local2:Player}">
+            <Ellipse Fill="Green" Stroke="Black" Height="{Binding Size.Height}" Width="{Binding Size.Width}"/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type local2:Enemy}">
+            <Ellipse Fill="Red" Stroke="Black" Height="{Binding Size.Height}" Width="{Binding Size.Width}"/>
+        </DataTemplate>
+    </local:SampleWindow.Resources>
+
+    <DockPanel>
+        <DockPanel.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0" Opacity=".6">
+                <GradientStop Color="Blue" Offset="0"/>
+                <GradientStop Color="Red" Offset=".5"/>
+                <GradientStop Color="Green" Offset="1"/>
+            </LinearGradientBrush>
+        </DockPanel.Background>
+        <StackPanel Orientation="Horizontal" Background="#70000000" DockPanel.Dock="Top">
+            <TextBlock Text="{Binding Lives, StringFormat='Lives: {0}'}" Margin="10" Foreground="AliceBlue"/>
+            <TextBlock Text="{Binding Score, StringFormat='Score: {0}'}" Margin="10" Foreground="AliceBlue"/>
+        </StackPanel>
+        <ItemsControl ItemsSource="{Binding GameObjects}" x:Name="GameArea">
+            <ItemsControl.ItemContainerStyle>
+                <Style TargetType="ContentPresenter">
+                    <Setter Property="Canvas.Left" Value="{Binding Location.X}"/>
+                    <Setter Property="Canvas.Top" Value="{Binding Location.Y}"/>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas IsItemsHost="True"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </DockPanel>
+</local:SampleWindow>

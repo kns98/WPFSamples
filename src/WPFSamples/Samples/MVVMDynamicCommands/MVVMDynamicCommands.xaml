@@ -1,0 +1,22 @@
+﻿<local:SampleWindow x:Class="WPFSamples.Samples.MVVMDynamicCommands.MVVMDynamicCommands"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPFSamples"
+                    Title="MVVMDynamicCommands" Height="300" Width="500">
+    <ItemsControl ItemsSource="{Binding Commands}" 
+                  VerticalAlignment="Top">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <Button Command="{Binding}"
+                        Content="{Binding DisplayName}"
+                        Margin="5"/>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+</local:SampleWindow>

@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B29EA0B9-4D17-410C-9ECB-AABBBCDB9FB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WPFSamples</RootNamespace>
+    <AssemblyName>WPFSamples</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="NotifyPropertyChangedBase.cs" />
+    <Compile Include="Samples\CalendarSample.xaml.cs">
+      <DependentUpon>CalendarSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Command.cs" />
+    <Compile Include="Samples\ChessBoard\ChessBoard.xaml.cs">
+      <DependentUpon>ChessBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ChessBoard\ChessPiece.cs" />
+    <Compile Include="Samples\ChessBoard\ChessPieceTypes.cs" />
+    <Compile Include="Samples\ComputerList\ComputerList.xaml.cs">
+      <DependentUpon>ComputerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ComputerList\Connection.cs" />
+    <Compile Include="Samples\ComputerList\RandomConnectionAdder.cs" />
+    <Compile Include="Samples\DataGridConnectors\DataGridConnectors.xaml.cs">
+      <DependentUpon>DataGridConnectors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DataGridConnectors\DataItemConnector.cs" />
+    <Compile Include="Samples\DataGridConnectors\PropertyChangedBase.cs" />
+    <Compile Include="Samples\HousePlan\BindablePoint.cs" />
+    <Compile Include="Samples\HousePlan\Command.cs" />
+    <Compile Include="Samples\HousePlan\Connector.cs" />
+    <Compile Include="Samples\HousePlan\DiagramObject.cs" />
+    <Compile Include="Samples\HousePlan\HousePlan.xaml.cs">
+      <DependentUpon>HousePlan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RelatedUrlAttribute.cs" />
+    <Compile Include="Sample.cs" />
+    <Compile Include="Samples\FadeToBold.xaml.cs">
+      <DependentUpon>FadeToBold.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\HousePlan\Left Edition Panel\ButtonsPanel.xaml.cs">
+      <DependentUpon>ButtonsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\HousePlan\Left Edition Panel\ConnectorPropertyEditor.xaml.cs">
+      <DependentUpon>ConnectorPropertyEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\HousePlan\Left Edition Panel\NodePropertyEditor.xaml.cs">
+      <DependentUpon>NodePropertyEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\HousePlan\Left Edition Panel\ParametersEditor.xaml.cs">
+      <DependentUpon>ParametersEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\HousePlan\Left Edition Panel\SnapSpotPropertyEditor.xaml.cs">
+      <DependentUpon>SnapSpotPropertyEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\HousePlan\MainViewModel.cs" />
+    <Compile Include="Samples\HousePlan\Node.cs" />
+    <Compile Include="Samples\HousePlan\NodesDataSource.cs" />
+    <Compile Include="Samples\HousePlan\PropertyChangedBase.cs" />
+    <Compile Include="Samples\HousePlan\SnapSpot.cs" />
+    <Compile Include="Samples\ImprovingWinformsPerformance\ImprovingWinformsPerformance.xaml.cs">
+      <DependentUpon>ImprovingWinformsPerformance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ImprovingWinformsPerformance\Item.cs" />
+    <Compile Include="Samples\LinesEditor\LinesDataSource.cs" />
+    <Compile Include="Samples\LinesEditor\LinesEditor.xaml.cs">
+      <DependentUpon>LinesEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\LinesEditor\LineViewModel.cs" />
+    <Compile Include="Samples\ListBoxAndUserControls\Item1.cs" />
+    <Compile Include="Samples\ListBoxAndUserControls\Item2.cs" />
+    <Compile Include="Samples\ListBoxAndUserControls\Item3.cs" />
+    <Compile Include="Samples\ListBoxAndUserControls\ItemBase.cs" />
+    <Compile Include="Samples\ListBoxAndUserControls\ListBoxAndUserControls.xaml.cs">
+      <DependentUpon>ListBoxAndUserControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ListBoxAndUserControls\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ListBoxAndUserControls\UserControl2.xaml.cs">
+      <DependentUpon>UserControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ListBoxAndUserControls\UserControl3.xaml.cs">
+      <DependentUpon>UserControl3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MVVMDynamicCommands\MVVMDynamicCommands.xaml.cs">
+      <DependentUpon>MVVMDynamicCommands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MVVMDynamicCommands\ViewModel.cs" />
+    <Compile Include="Samples\MVVMDynamicCommands\Command.cs" />
+    <Compile Include="Samples\MVVMTabControl\MVVMTabControl.xaml.cs">
+      <DependentUpon>MVVMTabControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MVVMTabControl\TabbedViewModel.cs" />
+    <Compile Include="Samples\MVVMTabControl\TabViewModel.cs" />
+    <Compile Include="Samples\NodesEditor\Connector.cs" />
+    <Compile Include="Samples\NodesEditor\DiagramObject.cs" />
+    <Compile Include="Samples\NodesEditor\Left Edition Panel\ButtonsPanel.xaml.cs">
+      <DependentUpon>ButtonsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\NodesEditor\Left Edition Panel\ConnectorPropertyEditor.xaml.cs">
+      <DependentUpon>ConnectorPropertyEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\NodesEditor\Left Edition Panel\NodePropertyEditor.xaml.cs">
+      <DependentUpon>NodePropertyEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\NodesEditor\Left Edition Panel\ParametersEditor.xaml.cs">
+      <DependentUpon>ParametersEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\NodesEditor\MainViewModel.cs" />
+    <Compile Include="Samples\NodesEditor\Node.cs" />
+    <Compile Include="Samples\NodesEditor\NodesDataSource.cs" />
+    <Compile Include="Samples\NodesEditor\NodesEditor.xaml.cs">
+      <DependentUpon>NodesEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SamsGameSample\Enemy.cs" />
+    <Compile Include="Samples\SamsGameSample\GameParameters.cs" />
+    <Compile Include="Samples\SamsGameSample\MainViewModel.cs" />
+    <Compile Include="Samples\SamsGameSample\MoveDirections.cs" />
+    <Compile Include="Samples\SamsGameSample\Player.cs" />
+    <Compile Include="Samples\SamsGameSample\PropertyChangedBase.cs" />
+    <Compile Include="Samples\SamsGameSample\SamsGameSample.xaml.cs">
+      <DependentUpon>SamsGameSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\StringToUI\Project.cs" />
+    <Compile Include="Samples\StringToUI\StringToUI.xaml.cs">
+      <DependentUpon>StringToUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\StringToUI\StringToUIConverter.cs" />
+    <Compile Include="Samples\SudokuBoard\SudokuBoard.xaml.cs">
+      <DependentUpon>SudokuBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SudokuBoard\SudokuViewModel.cs" />
+    <Compile Include="Samples\TimerGauge\TimerGauge.xaml.cs">
+      <DependentUpon>TimerGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\TimerGauge\ViewModel.cs" />
+    <Compile Include="Samples\ToggleButtonGrid\Square.cs" />
+    <Compile Include="Samples\ToggleButtonGrid\ToggleButtonGrid.xaml.cs">
+      <DependentUpon>ToggleButtonGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\VisualBrushTooltip.xaml.cs">
+      <DependentUpon>VisualBrushTooltip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleWindow.cs" />
+    <Page Include="Samples\CalendarSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ChessBoard\ChessBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\ComputerList\ComputerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\DataGridConnectors\DataGridConnectors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\HousePlan\HousePlan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Samples\FadeToBold.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\HousePlan\Left Edition Panel\ButtonsPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\HousePlan\Left Edition Panel\ConnectorPropertyEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\HousePlan\Left Edition Panel\EditorStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\HousePlan\Left Edition Panel\NodePropertyEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\HousePlan\Left Edition Panel\ParametersEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\HousePlan\Left Edition Panel\SnapSpotPropertyEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ImprovingWinformsPerformance\ImprovingWinformsPerformance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\LinesEditor\LinesEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\ListBoxAndUserControls\ListBoxAndUserControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\ListBoxAndUserControls\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\ListBoxAndUserControls\UserControl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\ListBoxAndUserControls\UserControl3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\MVVMDynamicCommands\MVVMDynamicCommands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\MVVMTabControl\MVVMTabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\NodesEditor\Left Edition Panel\ButtonsPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\NodesEditor\Left Edition Panel\ConnectorPropertyEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\NodesEditor\Left Edition Panel\EditorStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\NodesEditor\Left Edition Panel\NodePropertyEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\NodesEditor\Left Edition Panel\ParametersEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\NodesEditor\NodesEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\SamsGameSample\SamsGameSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\StringToUI\StringToUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\SudokuBoard\SudokuBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\TimerGauge\TimerGauge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\ToggleButtonGrid\ToggleButtonGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\VisualBrushTooltip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Segoe UI Symbol Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Samples\ChessBoard\BlackBishop.png" />
+    <Resource Include="Samples\ChessBoard\BlackKing.png" />
+    <Resource Include="Samples\ChessBoard\BlackKnight.png" />
+    <Resource Include="Samples\ChessBoard\BlackPawn.png" />
+    <Resource Include="Samples\ChessBoard\BlackQueen.png" />
+    <Resource Include="Samples\ChessBoard\BlackTower.png" />
+    <Resource Include="Samples\ChessBoard\WhiteBishop.png" />
+    <Resource Include="Samples\ChessBoard\WhiteKing.png" />
+    <Resource Include="Samples\ChessBoard\WhiteKnight.png" />
+    <Resource Include="Samples\ChessBoard\WhitePawn.png" />
+    <Resource Include="Samples\ChessBoard\WhiteQueen.png" />
+    <Resource Include="Samples\ChessBoard\WhiteTower.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
